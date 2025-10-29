@@ -110,9 +110,9 @@ namespace Hospital_Management
                 int rows = cmd.ExecuteNonQuery();
 
                 if (rows > 0)
-                    MessageBox.Show("Appointment booked successfully!");
+                    MessageBox.Show("Appointment has booked successfully!");
                 else
-                    MessageBox.Show("Booking failed!");
+                    MessageBox.Show("Booking has failed!");
 
                 con.Close();
             }
