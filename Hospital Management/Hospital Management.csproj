@@ -46,17 +46,122 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAppointments.Designer.cs">
+      <DependentUpon>AddAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDoctor.Designer.cs">
+      <DependentUpon>AddDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNurse.Designer.cs">
+      <DependentUpon>AddNurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPatient.Designer.cs">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminPasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPasswordChange.Designer.cs">
+      <DependentUpon>AdminPasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookApointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookApointment.Designer.cs">
+      <DependentUpon>BookApointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckAccountStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckAccountStatus.Designer.cs">
+      <DependentUpon>CheckAccountStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorDashboard.Designer.cs">
+      <DependentUpon>DoctorDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DoctorManagement.Designer.cs">
       <DependentUpon>DoctorManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet8.xsd</DependentUpon>
     </Compile>
     <Compile Include="Hospital_ManagementDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -88,17 +193,63 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Hospital_ManagementDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Hospital_ManagementDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hospital_ManagementDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_ManagementDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hospital_ManagementDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageAdmins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAdmins.Designer.cs">
+      <DependentUpon>ManageAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDepartment.Designer.cs">
+      <DependentUpon>ManageDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalRecords.Designer.cs">
+      <DependentUpon>MedicalRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseDashboard.Designer.cs">
+      <DependentUpon>NurseDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="NurseManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NurseManagement.Designer.cs">
       <DependentUpon>NurseManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NurseProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseProfile.Designer.cs">
+      <DependentUpon>NurseProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientDashboard.Designer.cs">
+      <DependentUpon>PatientDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="PatientManagement.cs">
       <SubType>Form</SubType>
@@ -108,23 +259,80 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAppointments.Designer.cs">
+      <DependentUpon>ShowAppointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Signup.Designer.cs">
-      <DependentUpon>Signup.cs</DependentUpon>
+    <Compile Include="SignupForm.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SignupForm.Designer.cs">
+      <DependentUpon>SignupForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAppointments.resx">
+      <DependentUpon>AddAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDoctor.resx">
+      <DependentUpon>AddDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNurse.resx">
+      <DependentUpon>AddNurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPatient.resx">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPasswordChange.resx">
+      <DependentUpon>AdminPasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookApointment.resx">
+      <DependentUpon>BookApointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckAccountStatus.resx">
+      <DependentUpon>CheckAccountStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorDashboard.resx">
+      <DependentUpon>DoctorDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorManagement.resx">
       <DependentUpon>DoctorManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageAdmins.resx">
+      <DependentUpon>ManageAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageDepartment.resx">
+      <DependentUpon>ManageDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecords.resx">
+      <DependentUpon>MedicalRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseDashboard.resx">
+      <DependentUpon>NurseDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NurseManagement.resx">
       <DependentUpon>NurseManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseProfile.resx">
+      <DependentUpon>NurseProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDashboard.resx">
+      <DependentUpon>PatientDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientManagement.resx">
       <DependentUpon>PatientManagement.cs</DependentUpon>
@@ -139,9 +347,114 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ShowAppointments.resx">
+      <DependentUpon>ShowAppointments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SignupForm.resx">
+      <DependentUpon>SignupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="HospitalDataSet.xsc">
+      <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet.xss">
+      <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet1.xsc">
+      <DependentUpon>HospitalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet1.xss">
+      <DependentUpon>HospitalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet2.xsc">
+      <DependentUpon>HospitalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet2.xss">
+      <DependentUpon>HospitalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet3.xsc">
+      <DependentUpon>HospitalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet3.xss">
+      <DependentUpon>HospitalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet4.xsc">
+      <DependentUpon>HospitalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet4.xss">
+      <DependentUpon>HospitalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet5.xsc">
+      <DependentUpon>HospitalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet5.xss">
+      <DependentUpon>HospitalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet6.xsc">
+      <DependentUpon>HospitalDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet6.xss">
+      <DependentUpon>HospitalDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet7.xsc">
+      <DependentUpon>HospitalDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet7.xss">
+      <DependentUpon>HospitalDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet8.xsc">
+      <DependentUpon>HospitalDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet8.xss">
+      <DependentUpon>HospitalDataSet8.xsd</DependentUpon>
+    </None>
     <None Include="Hospital_ManagementDataSet.xsc">
       <DependentUpon>Hospital_ManagementDataSet.xsd</DependentUpon>
     </None>
@@ -207,6 +520,28 @@
     </None>
     <None Include="Hospital_ManagementDataSet5.xss">
       <DependentUpon>Hospital_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_ManagementDataSet6.xsc">
+      <DependentUpon>Hospital_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_ManagementDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hospital_ManagementDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital_ManagementDataSet6.xss">
+      <DependentUpon>Hospital_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_ManagementDataSet7.xsc">
+      <DependentUpon>Hospital_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_ManagementDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hospital_ManagementDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital_ManagementDataSet7.xss">
+      <DependentUpon>Hospital_ManagementDataSet7.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

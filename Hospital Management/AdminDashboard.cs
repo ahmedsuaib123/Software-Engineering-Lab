@@ -13,6 +13,7 @@ namespace Hospital_Management
 {
     public partial class AdminDashboard : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
         public AdminDashboard()
         {
             InitializeComponent();
@@ -58,8 +59,7 @@ namespace Hospital_Management
 
         private void LoadCounts()
         {
-            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-HOP36BN\\SQLEXPRESS;Initial Catalog=Hospital Management;Integrated Security=True;TrustServerCertificate=True"))
-            {
+            
                 DataTable dt = new DataTable();
                 string query = @"
                     SELECT 
@@ -76,16 +76,19 @@ namespace Hospital_Management
                     lblDoctorCount.Text = "Total Doctors: " + dt.Rows[0]["TotalDoctors"].ToString();
                     lblNurseCount.Text = "Total Nurses: " + dt.Rows[0]["TotalNurses"].ToString();
                 }
-            }
+
+                //da = new SqlDataAdapter("SELECT COUNT(*) FROM Appointments", con);
+                //dt = new DataTable();
+                //da.Fill(dt);
+                //lblAppointmentCount.Text = "Total Appointments: " + dt.Rows[0][0].ToString();
+            
         }
 
-        // ✅ Load event
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
             LoadCounts();
         }
 
-        // ✅ Refresh counts automatically when Dashboard is re-activated
         protected override void OnActivated(EventArgs e)
         {
             base.OnActivated(e);
@@ -95,6 +98,75 @@ namespace Hospital_Management
         private void AdminDashboard_Load_1(object sender, EventArgs e)
         {
             LoadCounts();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            new PatientManagement().Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you really want to Logout?", "Logout", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                new Login().Show();
+                this.Hide();
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            new DoctorManagement().Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            new NurseManagement().Show();
+            this.Hide();
+        }
+
+        private void lblBillCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            new ManageDepartment().Show();
+            this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new AdminPasswordChange().Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new ShowAppointments().Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new MedicalRecords().Show();
+            this.Hide();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            new CheckAccountStatus().Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ManageAdmins().Show();
+            this.Hide();
         }
     }
 }

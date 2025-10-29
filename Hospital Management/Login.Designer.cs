@@ -37,6 +37,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.doctorTableAdapter1 = new Hospital_Management.Hospital_ManagementDataSetTableAdapters.DoctorTableAdapter();
             this.SuspendLayout();
             // 
             // label1
@@ -148,6 +149,10 @@
             this.linkLabel1.Text = "Forget Password";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // doctorTableAdapter1
+            // 
+            this.doctorTableAdapter1.ClearBeforeFill = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +189,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private Hospital_ManagementDataSetTableAdapters.DoctorTableAdapter doctorTableAdapter1;
     }
 }
 

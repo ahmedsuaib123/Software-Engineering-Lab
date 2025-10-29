@@ -13,7 +13,7 @@ namespace Hospital_Management
 {
     public partial class DoctorManagement : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-HOP36BN\\SQLEXPRESS;Initial Catalog=Hospital Management;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
         public DoctorManagement()
         {
             InitializeComponent();
@@ -60,6 +60,10 @@ namespace Hospital_Management
 
         private void DoctorManagement_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hospitalDataSet4.Doctor' table. You can move, or remove it, as needed.
+            this.doctorTableAdapter3.Fill(this.hospitalDataSet4.Doctor);
+            // TODO: This line of code loads data into the 'hospitalDataSet3.Doctor' table. You can move, or remove it, as needed.
+            this.doctorTableAdapter2.Fill(this.hospitalDataSet3.Doctor);
             // TODO: This line of code loads data into the 'hospital_ManagementDataSet4.Doctor' table. You can move, or remove it, as needed.
             this.doctorTableAdapter1.Fill(this.hospital_ManagementDataSet4.Doctor);
             // TODO: This line of code loads data into the 'hospital_ManagementDataSet.Doctor' table. You can move, or remove it, as needed.
@@ -74,12 +78,12 @@ namespace Hospital_Management
 
             string query = "select * from Doctor where DoctorID like '%" + textBox1.Text + "%' " +
                "or DoctorName like '%" + textBox1.Text + "%' " +
-               "or Age like '%" + textBox1.Text + "%' " +
+               "or DoctorAge like '%" + textBox1.Text + "%' " +
                "or Gender like '%" + textBox1.Text + "%' " +
                "or Qualification like '%" + textBox1.Text + "%' " +
-               "or DoctorPhoneNumber like '%" + textBox1.Text + "%' " +
+               "or DoctorContact like '%" + textBox1.Text + "%' " +
                "or Department like '%" + textBox1.Text + "%' " +
-               "or AvailableTime like '%" + textBox1.Text + "%'";
+               "or AvailableSlot like '%" + textBox1.Text + "%'";
 
 
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
@@ -89,6 +93,12 @@ namespace Hospital_Management
             sda.Fill(dt);
 
             dataGridView1.DataSource = dt;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new AddDoctor().Show();
+            this.Hide();
         }
     }
 }

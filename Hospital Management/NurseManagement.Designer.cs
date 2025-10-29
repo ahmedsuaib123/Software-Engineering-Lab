@@ -36,18 +36,28 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hospital_ManagementDataSet5 = new Hospital_Management.Hospital_ManagementDataSet5();
-            this.nurseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nurseTableAdapter = new Hospital_Management.Hospital_ManagementDataSet5TableAdapters.NurseTableAdapter();
             this.nurseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nurseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nurseAgeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nursePhoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nurseContactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nurseShiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nurseBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitalDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospitalDataSet5 = new Hospital_Management.HospitalDataSet5();
+            this.nurseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hospital_ManagementDataSet5 = new Hospital_Management.Hospital_ManagementDataSet5();
+            this.nurseTableAdapter = new Hospital_Management.Hospital_ManagementDataSet5TableAdapters.NurseTableAdapter();
+            this.nurseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nurseTableAdapter1 = new Hospital_Management.HospitalDataSet5TableAdapters.NurseTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospital_ManagementDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nurseBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet5BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nurseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospital_ManagementDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nurseBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,6 +77,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(278, 29);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TabStop = false;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -87,6 +99,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -119,28 +132,15 @@
             this.nurseIDDataGridViewTextBoxColumn,
             this.nurseNameDataGridViewTextBoxColumn,
             this.nurseAgeDataGridViewTextBoxColumn,
-            this.nursePhoneNumberDataGridViewTextBoxColumn,
-            this.shiftDataGridViewTextBoxColumn,
-            this.departmentIDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.nurseBindingSource;
+            this.genderDataGridViewTextBoxColumn,
+            this.nurseContactDataGridViewTextBoxColumn,
+            this.bloodGroupDataGridViewTextBoxColumn,
+            this.nurseShiftDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.nurseBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(83, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(626, 269);
             this.dataGridView1.TabIndex = 11;
-            // 
-            // hospital_ManagementDataSet5
-            // 
-            this.hospital_ManagementDataSet5.DataSetName = "Hospital_ManagementDataSet5";
-            this.hospital_ManagementDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nurseBindingSource
-            // 
-            this.nurseBindingSource.DataMember = "Nurse";
-            this.nurseBindingSource.DataSource = this.hospital_ManagementDataSet5;
-            // 
-            // nurseTableAdapter
-            // 
-            this.nurseTableAdapter.ClearBeforeFill = true;
             // 
             // nurseIDDataGridViewTextBoxColumn
             // 
@@ -161,23 +161,67 @@
             this.nurseAgeDataGridViewTextBoxColumn.HeaderText = "NurseAge";
             this.nurseAgeDataGridViewTextBoxColumn.Name = "nurseAgeDataGridViewTextBoxColumn";
             // 
-            // nursePhoneNumberDataGridViewTextBoxColumn
+            // genderDataGridViewTextBoxColumn
             // 
-            this.nursePhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "NursePhoneNumber";
-            this.nursePhoneNumberDataGridViewTextBoxColumn.HeaderText = "NursePhoneNumber";
-            this.nursePhoneNumberDataGridViewTextBoxColumn.Name = "nursePhoneNumberDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
             // 
-            // shiftDataGridViewTextBoxColumn
+            // nurseContactDataGridViewTextBoxColumn
             // 
-            this.shiftDataGridViewTextBoxColumn.DataPropertyName = "Shift";
-            this.shiftDataGridViewTextBoxColumn.HeaderText = "Shift";
-            this.shiftDataGridViewTextBoxColumn.Name = "shiftDataGridViewTextBoxColumn";
+            this.nurseContactDataGridViewTextBoxColumn.DataPropertyName = "NurseContact";
+            this.nurseContactDataGridViewTextBoxColumn.HeaderText = "NurseContact";
+            this.nurseContactDataGridViewTextBoxColumn.Name = "nurseContactDataGridViewTextBoxColumn";
             // 
-            // departmentIDDataGridViewTextBoxColumn
+            // bloodGroupDataGridViewTextBoxColumn
             // 
-            this.departmentIDDataGridViewTextBoxColumn.DataPropertyName = "DepartmentID";
-            this.departmentIDDataGridViewTextBoxColumn.HeaderText = "DepartmentID";
-            this.departmentIDDataGridViewTextBoxColumn.Name = "departmentIDDataGridViewTextBoxColumn";
+            this.bloodGroupDataGridViewTextBoxColumn.DataPropertyName = "BloodGroup";
+            this.bloodGroupDataGridViewTextBoxColumn.HeaderText = "BloodGroup";
+            this.bloodGroupDataGridViewTextBoxColumn.Name = "bloodGroupDataGridViewTextBoxColumn";
+            // 
+            // nurseShiftDataGridViewTextBoxColumn
+            // 
+            this.nurseShiftDataGridViewTextBoxColumn.DataPropertyName = "NurseShift";
+            this.nurseShiftDataGridViewTextBoxColumn.HeaderText = "NurseShift";
+            this.nurseShiftDataGridViewTextBoxColumn.Name = "nurseShiftDataGridViewTextBoxColumn";
+            // 
+            // nurseBindingSource2
+            // 
+            this.nurseBindingSource2.DataMember = "Nurse";
+            this.nurseBindingSource2.DataSource = this.hospitalDataSet5BindingSource;
+            // 
+            // hospitalDataSet5BindingSource
+            // 
+            this.hospitalDataSet5BindingSource.DataSource = this.hospitalDataSet5;
+            this.hospitalDataSet5BindingSource.Position = 0;
+            // 
+            // hospitalDataSet5
+            // 
+            this.hospitalDataSet5.DataSetName = "HospitalDataSet5";
+            this.hospitalDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nurseBindingSource
+            // 
+            this.nurseBindingSource.DataMember = "Nurse";
+            this.nurseBindingSource.DataSource = this.hospital_ManagementDataSet5;
+            // 
+            // hospital_ManagementDataSet5
+            // 
+            this.hospital_ManagementDataSet5.DataSetName = "Hospital_ManagementDataSet5";
+            this.hospital_ManagementDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nurseTableAdapter
+            // 
+            this.nurseTableAdapter.ClearBeforeFill = true;
+            // 
+            // nurseBindingSource1
+            // 
+            this.nurseBindingSource1.DataMember = "Nurse";
+            this.nurseBindingSource1.DataSource = this.hospitalDataSet5;
+            // 
+            // nurseTableAdapter1
+            // 
+            this.nurseTableAdapter1.ClearBeforeFill = true;
             // 
             // NurseManagement
             // 
@@ -192,11 +236,16 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "NurseManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nurse Management";
             this.Load += new System.EventHandler(this.NurseManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospital_ManagementDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nurseBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet5BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nurseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hospital_ManagementDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nurseBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,11 +263,17 @@
         private Hospital_ManagementDataSet5 hospital_ManagementDataSet5;
         private System.Windows.Forms.BindingSource nurseBindingSource;
         private Hospital_ManagementDataSet5TableAdapters.NurseTableAdapter nurseTableAdapter;
+        private HospitalDataSet5 hospitalDataSet5;
+        private System.Windows.Forms.BindingSource nurseBindingSource1;
+        private HospitalDataSet5TableAdapters.NurseTableAdapter nurseTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nurseIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nurseNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nurseAgeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nursePhoneNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shiftDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn departmentIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nurseContactDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bloodGroupDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nurseShiftDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource nurseBindingSource2;
+        private System.Windows.Forms.BindingSource hospitalDataSet5BindingSource;
     }
 }
